@@ -1,7 +1,7 @@
 //https://leetcode.com/explore/learn/card/fun-with-arrays/521/introduction/3240/
 
 fun sortedSquares(nums: IntArray): IntArray {
-    return nums.map{it*it}.sortedBy { it }.toIntArray()
+    return nums.map{it*it}.sortedBy{it}.toIntArray()
 }
 fun main() {
     println(sortedSquares(intArrayOf(-4, -1, 0, 3, 10)).contentToString())

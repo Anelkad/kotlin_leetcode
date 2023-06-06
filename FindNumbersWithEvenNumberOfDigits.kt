@@ -4,6 +4,6 @@ fun findNumbers(nums: IntArray): Int {
 }
 
 fun main(){
-    print(findNumbers(intArrayOf(12,345,2,6,7896)))
-    print(findNumbers(intArrayOf(555,901,482,1771)))
+    println(findNumbers(intArrayOf(12,345,2,6,7896)))
+    println(findNumbers(intArrayOf(555,901,482,1771)))
 }
