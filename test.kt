@@ -26,5 +26,5 @@ class Teacher(override var firstName: String, override var lastName: String, ove
 }
 
 fun main(){
-    //todo compare list, arraylist
+
 }
