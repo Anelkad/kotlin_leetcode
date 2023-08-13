@@ -6,5 +6,5 @@ fun isAnagram(s: String, t: String): Boolean {
 }
 
 fun main(){
-    println(isAnagram("anagram","nagaram"))
+    println(isAnagram("listen","silent"))
 }
