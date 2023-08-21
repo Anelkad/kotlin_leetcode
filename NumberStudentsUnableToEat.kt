@@ -3,21 +3,17 @@ import kotlin.collections.ArrayDeque
 
 //https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/
 fun countStudents(students: IntArray, sandwiches: IntArray): Int {
-    val queue = ArrayDeque<Int>()
     val stack = Stack<Int>()
+    val queue = students.toMutableList()
     sandwiches.reversed().forEach { stack.push(it) }
-    students.forEach { queue.addLast(it) }
-    while (stack.isNotEmpty() && queue.contains(stack.peek())){
-        if (queue.first()==stack.peek()){
-            queue.removeFirst()
-            stack.pop()
-        }
+    sandwiches.forEach { sandwiche ->
+        if (!queue.contains(sandwiche)) return stack.size
         else {
-            queue.addLast(queue.first())
-            queue.removeFirst()
+            stack.pop()
+            queue.removeAt(queue.indexOf(sandwiche))
         }
     }
-    return queue.size
+    return stack.size
 }
 
 fun main(){

@@ -17,5 +17,5 @@ fun isPalindrome(s: String): Boolean {
 }
 
 fun main(){
-    println(isPalindrome("0P"))
+    println(isPalindrome("0P").toString().capitalize())
 }
